@@ -1,0 +1,146 @@
+/* General */
+body {
+    background-color: rgb(27, 27, 27);
+    font-family: 'Cascadia Code', monospace;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.busqueda {
+    display: flex;
+    gap: 10px;
+}
+
+.busqueda input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.busqueda button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.busqueda button:hover {
+    background-color: #0056b3;
+}
+
+/* Botones de selección */
+.botonesSel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.botonesSel button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botonesSel button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/* Lista de resultados */
+#milista {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+#milista li {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+}
+
+#milista img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#milista li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    color: #fff;
+}
+
+/* Loader */
+#loader {
+    display: block;
+    margin: 50px auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
